@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/home_page.dart';
+import 'package:lottie/lottie.dart';
 
 void main() => runApp(const MyApp());
 

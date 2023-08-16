@@ -24,8 +24,7 @@ class Storyline extends StatelessWidget {
             fontSize: 16.0,
           ),
         ),
-        // No expand-collapse in this tutorial, we just slap the "more"
-        // button below the text like in the mockup.
+        
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.end,
