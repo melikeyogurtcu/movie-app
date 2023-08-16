@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, camel_case_types
 
 import 'package:flutter/material.dart';
+import 'package:movie_app/detail_page.dart';
 
 
 
@@ -24,32 +25,41 @@ class home_page extends StatelessWidget {
       return  Stack(
 
         
-        children: [
+        children: <Widget> [
 
-          Card(
+          InkWell(
+            onTap:(){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DetailPage()));
+            } ,
+            child: Card(
             
-          elevation: 20,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0),),
-          margin: const EdgeInsets.all(4),
+            elevation: 20,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0),),
+            margin: const EdgeInsets.all(4),
             
-          child: const Column(
-            children: [
-            Expanded(
-              child: ClipRRect(
-              borderRadius: 
-             BorderRadius.all(Radius.circular(24)),
-              child:
-           Image(image: AssetImage("/Users/melikeyogurtcu/flutter_projects/movie_app/assets/image1.jpeg"),
-          fit: BoxFit.contain,),
-              
+            child: const Column(
+              children: [
+                
+              Expanded(
+                child: ClipRRect(
+                borderRadius: 
+               BorderRadius.all(Radius.circular(24)),
+                child:
+                
+             Image(image: AssetImage("/Users/melikeyogurtcu/flutter_projects/movie_app/assets/image1.jpeg"),
+            fit: BoxFit.contain,),
+                
+            
+                
+            
+              ),),
+            ]),
           
-            ),),
-          ]),
-
-          
-          
-        
-        ),
+            
+            
+                  
+                  ),
+          ),
 
 
         const Column(
