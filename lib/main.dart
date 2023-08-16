@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/home_page.dart';
-import 'package:lottie/lottie.dart';
+
+import 'package:movie_app/splash_screen.dart';
+
 
 void main() => runApp(const MyApp());
 
@@ -9,20 +10,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   MaterialApp(
+    return   const  MaterialApp(
       title: 'Material App',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: const home_page(),
         
-        appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: const Text( 
-          'Popular Movies', style: TextStyle(color: Colors.red),
+        body:  Center(
+          child: SplashScreen()
           ),
-
-
-        ),
+        
+        
       ),
       
       
