@@ -1,7 +1,8 @@
 // ignore_for_file: file_names, camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:movie_app/detail_page.dart';
+import 'package:movie_app/movie_api.dart';
+import 'detail_page.dart';
 
 
 
@@ -29,7 +30,7 @@ class home_page extends StatelessWidget {
 
           InkWell(
             onTap:(){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DetailPage()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  MovieDetailsPage(testMovie,index)));
             } ,
             child: Card(
             
@@ -37,17 +38,20 @@ class home_page extends StatelessWidget {
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0),),
             margin: const EdgeInsets.all(4),
             
-            child: const Column(
+            child:  Column(
               children: [
                 
               Expanded(
                 child: ClipRRect(
                 borderRadius: 
-               BorderRadius.all(Radius.circular(24)),
+               const BorderRadius.all(Radius.circular(24)),
                 child:
                 
-             Image(image: AssetImage("/Users/melikeyogurtcu/flutter_projects/movie_app/assets/image1.jpeg"),
-            fit: BoxFit.contain,),
+             Hero(
+              tag: "hero-$index",
+               child: const Image(image: AssetImage("/Users/melikeyogurtcu/movie-app/movie-app/assets/poster.jpeg"),
+                         fit: BoxFit.contain,),
+             ),
                 
             
                 
