@@ -1,8 +1,8 @@
 import 'models.dart';
 
 final testMovie = Movie(
-  bannerUrl: '/Users/melikeyogurtcu/movie-app/movie-app/images/banner.jpg',
-  posterUrl: '/Users/melikeyogurtcu/movie-app/movie-app/images/poster.jpeg',
+  bannerUrl: 'images/banner.jpg',
+  posterUrl: 'images/poster.jpeg',
   title: 'How To Train Your Dragon 2',
   rating: 7.8,
   //starRating: 4,

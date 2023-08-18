@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:movie_app/movie_api.dart';
+
+import 'package:animate_do/animate_do.dart';
 import 'detail_page.dart';
 
 
@@ -42,47 +44,50 @@ class home_page extends StatelessWidget {
               onTap:(){
                 Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  MovieDetailsPage(testMovie,index)));
               } ,
-              child: Card(
-              
-              elevation: 20,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0),),
-              margin: const EdgeInsets.all(4),
-              
-              child:  Column(
-                children: [
-                  
-                Expanded(
-                  child: ClipRRect(
-                  borderRadius: 
-                 const BorderRadius.all(Radius.circular(24)),
-                  child:
-                  
-               Hero(
-                tag: "hero-$index",
-                 child: const Image(image: AssetImage("/Users/melikeyogurtcu/movie-app/movie-app/images/poster.jpeg"),
-                           fit: BoxFit.contain,),
-               ),
-                  
-              
-                  
-              
-                ),),
-              ]),
-            
-              
-              
+              child: FadeInUp (
+                duration: Duration(milliseconds: index*200),
+                child: Card(
+                
+                elevation: 20,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25.0),),
+                margin: const EdgeInsets.all(4),
+                
+                child:  Column(
+                  children: [
                     
-                    ),
+                  Expanded(
+                    child: ClipRRect(
+                    borderRadius: 
+                   const BorderRadius.all(Radius.circular(24)),
+                    child:
+                    
+                 Hero(
+                  tag: "hero-$index",
+                   child: const Image(image: AssetImage("images/poster.jpeg"),
+                             fit: BoxFit.contain,),
+                 ),
+                    
+                
+                    
+                
+                  ),),
+                ]),
+                          
+                
+                
+                      
+                      ),
+              ),
             ),
     
     
-          const Column(
+          /*const Column(
             children:  [
               Spacer(),
               Text('   Movie Name', style: TextStyle(color: Colors.white, fontSize: 25), ),
               
             ],
-          )
+          )*/
           ],
     
           
