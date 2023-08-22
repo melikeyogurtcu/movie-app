@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:movie_app/functions.dart';
 import 'package:movie_app/home_page.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,11 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
     navigateGoHome();
   }
   navigateGoHome() async {
+
     await Future.delayed(const Duration(seconds: 6), (){});
-    // ignore: use_build_context_synchronously
-   //Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  const home_page()));
-    // ignore: use_build_context_synchronously
-    
     Navigator.pushReplacement(context, MaterialPageRoute(builder: ((context) => const home_page())));
   }
 
