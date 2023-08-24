@@ -8,8 +8,9 @@ class Movie2 {
   final int id;
   final String title;
   final String overview;
-
-  var categories;
+  final String release_date;
+  final String original_language;
+  final double  vote_average;
   Movie2({
     required this.adult,
     required this.backdrop_path,
@@ -17,6 +18,9 @@ class Movie2 {
     required this.id,
     required this.title,
     required this.overview,
+    required this.release_date,
+    required this.original_language,
+    required this.vote_average,
   });
 
   Movie2 copyWith({
@@ -26,6 +30,9 @@ class Movie2 {
     int? id,
     String? title,
     String? overview,
+    String? release_date,
+    String? original_language,
+    double? vote_average,
   }) {
     return Movie2(
       adult: adult ?? this.adult,
@@ -34,6 +41,9 @@ class Movie2 {
       id: id ?? this.id,
       title: title ?? this.title,
       overview: overview ?? this.overview,
+      release_date: release_date ?? this.release_date,
+      original_language: original_language ?? this.original_language,
+      vote_average: vote_average ?? this.vote_average,
     );
   }
 
@@ -45,6 +55,9 @@ class Movie2 {
       'id': id,
       'title': title,
       'overview': overview,
+      'release_date': release_date,
+      'original_language': original_language,
+      'vote_average': vote_average,
     };
   }
 
@@ -56,6 +69,9 @@ class Movie2 {
       id: map['id'] as int,
       title: map['title'] as String,
       overview: map['overview'] as String,
+      release_date: map['release_date'] as String,
+      original_language: map['original_language'] as String,
+      vote_average: map['vote_average'] as double,
     );
   }
 
@@ -65,7 +81,7 @@ class Movie2 {
 
   @override
   String toString() {
-    return 'Movie2(adult: $adult, backdrop_path: $backdrop_path, poster_path: $poster_path, id: $id, title: $title, overview: $overview)';
+    return 'Movie2(adult: $adult, backdrop_path: $backdrop_path, poster_path: $poster_path, id: $id, title: $title, overview: $overview, release_date: $release_date, original_language: $original_language, vote_average: $vote_average)';
   }
 
   @override
@@ -78,7 +94,10 @@ class Movie2 {
       other.poster_path == poster_path &&
       other.id == id &&
       other.title == title &&
-      other.overview == overview;
+      other.overview == overview &&
+      other.release_date == release_date &&
+      other.original_language == original_language &&
+      other.vote_average == vote_average;
   }
 
   @override
@@ -88,6 +107,9 @@ class Movie2 {
       poster_path.hashCode ^
       id.hashCode ^
       title.hashCode ^
-      overview.hashCode;
+      overview.hashCode ^
+      release_date.hashCode ^
+      original_language.hashCode ^
+      vote_average.hashCode;
   }
 }

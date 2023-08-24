@@ -17,12 +17,48 @@ class MovieDetailsPage extends StatelessWidget {
       body: Column(
         children: [
           MovieDetailHeader(movie,index),
-          Padding(
+         
+          SizedBox(height: 10,),
+            Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [Card(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+              height: 50,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+               children: [
+                Text('Language'),
+                 Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: Text(movie.original_language.toUpperCase(),style: TextStyle(color: Colors.red)),)
+               ],
+                   ),
+            ),
+          ),
+        ),Card(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+              height: 50,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+               children: [
+                Text('Vote Average'),
+                 Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: Text(movie.vote_average.toString(),style: TextStyle(color: Colors.green)),)
+               ],
+                   ),
+            ),
+          ),
+        ),]),
+       Padding(
             padding: const EdgeInsets.all(20.0),
             child: Storyline(movie.overview),
           ),
-          const SizedBox(height: 20.0),
-          const SizedBox(height: 50.0),
+          const SizedBox(height: 30.0),
         ],
       ),
     );

@@ -5,43 +5,41 @@ import 'arc_banner_image.dart';
 import 'poster.dart';
 
 class MovieDetailHeader extends StatelessWidget {
-  const MovieDetailHeader(this.movie, this.index, {super.key});
+   MovieDetailHeader(this.movie, this.index, {super.key});
   final Movie2 movie;
   final int index;
 
-  // List<Widget> _buildCategoryChips(TextTheme textTheme) {
-  //   return movie.categories!.map((category) {
-  //     return Padding(
-  //       padding: const EdgeInsets.only(right: 8.0),
-  //       child: Chip(
-  //         label: Text(category),
-  //         labelStyle: textTheme.caption,
-  //         backgroundColor: Colors.black12,
-  //       ),
-  //     );
-  //   }).toList();
-  // }
+  List<String> categories=['Comedy','Fantastic'];
+  List<Widget> _buildCategoryChips(TextTheme textTheme) {
+    return categories.map((category) {
+      return Padding(
+        padding: const EdgeInsets.only(right: 8.0),
+        child: Chip(
+          label: Text(category),
+          labelStyle: textTheme.caption,
+          backgroundColor: Colors.black12,
+        ),
+      );
+    }).toList();
+  }
 
   @override
   Widget build(BuildContext context) {
     var textTheme = Theme.of(context).textTheme;
 
     var movieInformation = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              movie.title,
-              style: textTheme.titleMedium,
-            ),
-          ],
+        
+        SizedBox(
+          width: double.infinity,
+          child: Text(
+            movie.title,
+            style: const  TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
+            
+          ),
         ),
-        const SizedBox(height: 8.0),
         const SizedBox(height: 12.0),
-       // Row(children: _buildCategoryChips(textTheme)),
-      ],
+     ],
     );
 
     return Stack(
@@ -51,7 +49,7 @@ class MovieDetailHeader extends StatelessWidget {
           child: ArcBannerImage(movie.backdrop_path),
         ),
         Positioned(
-          bottom: 0.0,
+          bottom: 20.0,
           left: 16.0,
           right: 16.0,
           child: Row(
@@ -76,3 +74,43 @@ class MovieDetailHeader extends StatelessWidget {
     );
   }
 }
+
+
+
+
+/*   Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [Card(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+              height: 50,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+               children: [
+                Text('Language'),
+                 Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: Text(movie.original_language.toUpperCase(),style: TextStyle(color: Colors.red)),)
+               ],
+                   ),
+            ),
+          ),
+        ),Card(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+              height: 50,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+               children: [
+                Text('Vote Average'),
+                 Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: Text(movie.vote_average.toString(),style: TextStyle(color: Colors.green)),)
+               ],
+                   ),
+            ),
+          ),
+        ),]),
+       */
