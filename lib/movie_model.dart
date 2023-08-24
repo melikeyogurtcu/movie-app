@@ -10,7 +10,7 @@ class Movie2 {
   final String overview;
   final String release_date;
   final String original_language;
-  final double  vote_average;
+  final double vote_average;
   Movie2({
     required this.adult,
     required this.backdrop_path,
@@ -77,7 +77,8 @@ class Movie2 {
 
   String toJson() => json.encode(toMap());
 
-  factory Movie2.fromJson(String source) => Movie2.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory Movie2.fromJson(String source) =>
+      Movie2.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
@@ -87,29 +88,28 @@ class Movie2 {
   @override
   bool operator ==(covariant Movie2 other) {
     if (identical(this, other)) return true;
-  
-    return 
-      other.adult == adult &&
-      other.backdrop_path == backdrop_path &&
-      other.poster_path == poster_path &&
-      other.id == id &&
-      other.title == title &&
-      other.overview == overview &&
-      other.release_date == release_date &&
-      other.original_language == original_language &&
-      other.vote_average == vote_average;
+
+    return other.adult == adult &&
+        other.backdrop_path == backdrop_path &&
+        other.poster_path == poster_path &&
+        other.id == id &&
+        other.title == title &&
+        other.overview == overview &&
+        other.release_date == release_date &&
+        other.original_language == original_language &&
+        other.vote_average == vote_average;
   }
 
   @override
   int get hashCode {
     return adult.hashCode ^
-      backdrop_path.hashCode ^
-      poster_path.hashCode ^
-      id.hashCode ^
-      title.hashCode ^
-      overview.hashCode ^
-      release_date.hashCode ^
-      original_language.hashCode ^
-      vote_average.hashCode;
+        backdrop_path.hashCode ^
+        poster_path.hashCode ^
+        id.hashCode ^
+        title.hashCode ^
+        overview.hashCode ^
+        release_date.hashCode ^
+        original_language.hashCode ^
+        vote_average.hashCode;
   }
 }

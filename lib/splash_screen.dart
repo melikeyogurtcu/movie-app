@@ -11,29 +11,28 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
-  void initState(){
+  void initState() {
     super.initState();
     navigateGoHome();
   }
-  navigateGoHome() async {
 
-    await Future.delayed(const Duration(seconds: 6), (){});
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: ((context) => const home_page())));
+  navigateGoHome() async {
+    await Future.delayed(const Duration(seconds: 6), () {});
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: ((context) => const home_page())));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-
-child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
 //Lottie animation is added a child widget
-              child: Lottie.asset("images/animation_lldtbs8j.json"),
-            ),
+            child: Lottie.asset("images/animation_lldtbs8j.json"),
+          ),
         ),
       ),
     );

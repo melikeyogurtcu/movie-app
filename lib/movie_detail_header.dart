@@ -5,18 +5,18 @@ import 'arc_banner_image.dart';
 import 'poster.dart';
 
 class MovieDetailHeader extends StatelessWidget {
-   MovieDetailHeader(this.movie, this.index, {super.key});
+  MovieDetailHeader(this.movie, this.index, {super.key});
   final Movie2 movie;
   final int index;
 
-  List<String> categories=['Comedy','Fantastic'];
+  List<String> categories = ['Comedy', 'Fantastic'];
   List<Widget> _buildCategoryChips(TextTheme textTheme) {
     return categories.map((category) {
       return Padding(
         padding: const EdgeInsets.only(right: 8.0),
         child: Chip(
           label: Text(category),
-          labelStyle: textTheme.caption,
+          labelStyle: textTheme.bodySmall,
           backgroundColor: Colors.black12,
         ),
       );
@@ -25,21 +25,28 @@ class MovieDetailHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var textTheme = Theme.of(context).textTheme;
-
     var movieInformation = Column(
       children: [
-        
         SizedBox(
           width: double.infinity,
           child: Text(
             movie.title,
-            style: const  TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
-            
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey.shade800,
+              shadows: [
+                Shadow(
+                  color: Colors.black.withOpacity(0.3),
+                  offset: const Offset(2.0, 2.0),
+                  blurRadius: 4.0,
+                ),
+              ],
+            ),
           ),
         ),
         const SizedBox(height: 12.0),
-     ],
+      ],
     );
 
     return Stack(
@@ -57,15 +64,27 @@ class MovieDetailHeader extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Hero(
-
-              tag: "hero-$index",
-                child: Poster(
-                  movie.poster_path,
-                  height: 180.0,
-                  index: index,
+                tag: "hero-$index",
+                child: Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black
+                            .withOpacity(0.3), 
+                        offset:
+                            const Offset(8.0, 8.0), 
+                        blurRadius: 8.0, 
+                      ),
+                    ],
+                  ),
+                  child: Poster(
+                    movie.poster_path,
+                    height: 180.0,
+                    index: index,
+                  ),
                 ),
               ),
-              SizedBox(width: 16.0),
+              const SizedBox(width: 16.0),
               Expanded(child: movieInformation),
             ],
           ),

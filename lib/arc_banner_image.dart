@@ -9,14 +9,13 @@ class ArcBannerImage extends StatelessWidget {
     var screenWidth = MediaQuery.of(context).size.width;
 
     return ClipPath(
-      clipper: ArcClipper(),
-      child: Image.network("https://image.tmdb.org/t/p/w780${imageUrl}",
-                            
-        width: screenWidth,
-        height: 300.0,   fit: BoxFit.cover,)
-      
-      
-    );
+        clipper: ArcClipper(),
+        child: Image.network(
+          "https://image.tmdb.org/t/p/w780${imageUrl}",
+          width: screenWidth,
+          height: 300.0,
+          fit: BoxFit.cover,
+        ));
   }
 }
 

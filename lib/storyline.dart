@@ -24,7 +24,6 @@ class Storyline extends StatelessWidget {
             fontSize: 16.0,
           ),
         ),
-        
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.end,
