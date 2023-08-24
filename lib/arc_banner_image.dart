@@ -10,12 +10,12 @@ class ArcBannerImage extends StatelessWidget {
 
     return ClipPath(
       clipper: ArcClipper(),
-      child: Image.asset(
-        imageUrl!,
+      child: Image.network("https://image.tmdb.org/t/p/w200${imageUrl}",
+                            
         width: screenWidth,
-        height: 230.0,
-        fit: BoxFit.cover,
-      ),
+        height: 250.0,   fit: BoxFit.cover,)
+      
+      
     );
   }
 }

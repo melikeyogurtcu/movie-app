@@ -1,27 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/movie_model.dart';
 
 import 'arc_banner_image.dart';
-import 'models.dart';
 import 'poster.dart';
 
-class MovieDetailHeader extends StatelessWidget {
+class MovieDetailHeader extends StatefulWidget {
   const MovieDetailHeader(this.movie, this.index, {super.key});
-  final Movie movie;
+  final Movie2 movie;
   final int index;
 
-  List<Widget> _buildCategoryChips(TextTheme textTheme) {
-    return movie.categories!.map((category) {
-      return Padding(
-        padding: const EdgeInsets.only(right: 8.0),
-        child: Chip(
-          label: Text(category),
-          labelStyle: textTheme.caption,
-          backgroundColor: Colors.black12,
-        ),
-      );
-    }).toList();
-  }
+  @override
+  State<MovieDetailHeader> createState() => _MovieDetailHeaderState();
+}
 
+class _MovieDetailHeaderState extends State<MovieDetailHeader> {
+  // List<Widget> _buildCategoryChips(TextTheme textTheme) {
   @override
   Widget build(BuildContext context) {
     var textTheme = Theme.of(context).textTheme;
@@ -29,13 +22,18 @@ class MovieDetailHeader extends StatelessWidget {
     var movieInformation = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          movie.title!,
-          style: textTheme.headline6,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              widget.movie.title,
+              style: textTheme.titleMedium,
+            ),
+          ],
         ),
-        SizedBox(height: 8.0),
-        SizedBox(height: 12.0),
-        Row(children: _buildCategoryChips(textTheme)),
+        const SizedBox(height: 8.0),
+        const SizedBox(height: 12.0),
+       // Row(children: _buildCategoryChips(textTheme)),
       ],
     );
 
@@ -43,7 +41,7 @@ class MovieDetailHeader extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: 140.0),
-          child: ArcBannerImage(movie.bannerUrl),
+          child: ArcBannerImage(widget.movie.backdrop_path),
         ),
         Positioned(
           bottom: 0.0,
@@ -55,11 +53,11 @@ class MovieDetailHeader extends StatelessWidget {
             children: [
               Hero(
 
-              tag: "hero-$index",
+              tag: "hero-${widget.index}",
                 child: Poster(
-                  movie.posterUrl,
+                  widget.movie.poster_path,
                   height: 180.0,
-                  index: index,
+                  index: widget.index,
                 ),
               ),
               SizedBox(width: 16.0),

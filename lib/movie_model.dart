@@ -8,6 +8,8 @@ class Movie2 {
   final int id;
   final String title;
   final String overview;
+
+  var categories;
   Movie2({
     required this.adult,
     required this.backdrop_path,

@@ -25,11 +25,11 @@ class AppFunctions {
       return Future.value();
     }
 
-    static Future<void> authenticateUser() async {
+    /*static Future<void> authenticateUser() async {
       var response = await dio.get(
         "https://api.themoviedb.org/3/account/20327044", 
         options: Options(
           headers: {"authorization": authToken}
         ));
-    }
+    }*/
 }

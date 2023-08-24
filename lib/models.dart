@@ -1,4 +1,4 @@
-class Movie{
+/*class Movie{
 
 Movie({
     this.bannerUrl,
@@ -19,4 +19,4 @@ Movie({
   final String? storyline;
  
  
-}
+}*/

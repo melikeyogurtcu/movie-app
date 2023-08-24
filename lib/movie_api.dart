@@ -1,4 +1,4 @@
-import 'models.dart';
+/*import 'models.dart';
 
 final testMovie = Movie(
   bannerUrl: 'images/banner.jpg',
@@ -10,3 +10,4 @@ final testMovie = Movie(
   storyline: 'When Hiccup and Toothless discover an ice cave that is home to hundreds of new wild dragons and the mysterious Dragon Rider, the two friends find themselves at the center of a battle to protect the peace.'
   
   );
+*/

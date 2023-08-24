@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-
-class Poster extends StatelessWidget {
+import 'functions.dart';
+import 'movie_model.dart';
+import 'home_page.dart';
+class Poster extends StatefulWidget {
   static const POSTER_RATIO = 0.7;
 
-  const Poster(
+   Poster(
     this.posterUrl, {super.key, 
     this.height = 100.0, required this.index,
   });
@@ -13,15 +15,27 @@ class Poster extends StatelessWidget {
   final int index;
 
   @override
+  State<Poster> createState() => _PosterState();
+}
+
+class _PosterState extends State<Poster> {
+  
+
+  @override
   Widget build(BuildContext context) {
-    var width = POSTER_RATIO * height;
+    var width = Poster.POSTER_RATIO * widget.height;
 
     return Container(
-      height: height,
+      height: widget.height,
       width: width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        image: DecorationImage(image: AssetImage( posterUrl!,
+
+        
+        image:    
+        
+        
+         DecorationImage(image: NetworkImage(("https://image.tmdb.org/t/p/w200${widget.posterUrl}"),
        ), fit: BoxFit.cover,
        
        )

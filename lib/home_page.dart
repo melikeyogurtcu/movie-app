@@ -79,7 +79,7 @@ class _home_pageState extends State<home_page> {
               
               InkWell(
                 onTap:(){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  MovieDetailsPage(testMovie,index)));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  MovieDetailsPage(AppFunctions.movies[index],index)));
                 } ,
                 child: FadeInUp (
                   duration: Duration(milliseconds: index*200),
