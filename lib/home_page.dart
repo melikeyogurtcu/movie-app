@@ -24,7 +24,7 @@ class _home_pageState extends State<home_page> {
       try {
         await AppFunctions.getFilmList();
         _movies = AppFunctions.movies;
-        print("appfunction giirldi.");
+        print("appfunction'a girildi.");
       } catch (e) {
         print(e);
       }
