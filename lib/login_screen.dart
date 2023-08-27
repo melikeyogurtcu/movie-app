@@ -9,14 +9,14 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController _usernameController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("images/imagemovie.png"),
             fit: BoxFit.cover,
@@ -29,36 +29,36 @@ class _LoginScreenState extends State<LoginScreen> {
               // Kullanıcı adı alanı
               Container(
                 width: 200,
-                padding: EdgeInsets.symmetric(vertical: 5),
+                padding: const EdgeInsets.symmetric(vertical: 5),
                 child: TextField(
                   controller: _usernameController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: "User Name",
                     border: OutlineInputBorder(),
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               // Şifre alanı
               Container(
                 width: 200,
-                padding: EdgeInsets.symmetric(vertical: 5),
+                padding: const EdgeInsets.symmetric(vertical: 5),
                 child: TextField(
                   controller: _passwordController,
                   obscureText: true,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: "Password",
                     border: OutlineInputBorder(),
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               // Giriş düğmesi
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => home_page()),
+                    MaterialPageRoute(builder: (context) => const home_page()),
                   );
                   String username = _usernameController.text;
                   String password = _passwordController.text;
@@ -70,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   backgroundColor:
                       Colors.red.shade500, // Buton rengini sarı yap
                 ),
-                child: Text("ENTER"),
+                child: const Text("ENTER"),
               ),
             ],
           ),
