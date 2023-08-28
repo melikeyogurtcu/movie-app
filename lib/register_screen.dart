@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:movie_app/home_page.dart';
 
-
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
 
@@ -13,14 +12,26 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  late FirebaseAuth auth ;
+  late FirebaseAuth auth;
 
-@override
-void initState(){
-  super.initState();
-  auth = FirebaseAuth.instance;
+  Future<void> registerWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: _usernameController.text,
+        password: _passwordController.text,
+      );
+      debugPrint('Registered: ${userCredential.user!.uid}');
+    } catch (e) {
+      debugPrint('Error: $e');
+    }
   }
 
+  @override
+  void initState() {
+    super.initState();
+    auth = FirebaseAuth.instance;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,14 +47,14 @@ void initState(){
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // User Name area
+              // Username area
               Container(
                 width: 200,
                 padding: const EdgeInsets.symmetric(vertical: 5),
                 child: TextField(
                   controller: _usernameController,
                   decoration: const InputDecoration(
-                    labelText: "Username",
+                    labelText: "Username or Email",
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -66,28 +77,28 @@ void initState(){
               // Enter Button
               ElevatedButton(
                 onPressed: () {
+                  registerWithEmailAndPassword(_usernameController.text, _passwordController.text);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red.shade500,
                 ),
-                child: const Text("Save"),
+                child: const Text("Create my account "),
               ),
-              const Text('Do you have an account ?',
-              style:  TextStyle(
-                color: Colors.red,
-                fontSize: 15,
-
-              ),
-              
+              const Text(
+                'Do you have an account ?',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 15,
+                ),
               ),
               ElevatedButton(
                 onPressed: () {
-                    Navigator.pop(context);
+                  Navigator.pop(context);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
                 ),
-                child: const Text("Sign In"),
+                child: const Text("Sign in"),
               ),
             ],
           ),
@@ -95,9 +106,11 @@ void initState(){
       ),
     );
   }
+
+  
 }
 
-void main()  {
+void main() {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: RegisterScreen(),
