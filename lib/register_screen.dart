@@ -1,18 +1,16 @@
-
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:movie_app/home_page.dart';
-import 'package:movie_app/register_screen.dart';
 
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   late FirebaseAuth auth ;
@@ -68,39 +66,28 @@ void initState(){
               // Enter Button
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const home_page()),
-                  );
-                  String username = _usernameController.text;
-                  String password = _passwordController.text;
-
-                  // Giriş işlemleri veya doğrulama burada yapılabilir
-                  // Örneğin bir API çağrısı veya yerel veritabanı kontrolü
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red.shade500,
                 ),
-                child: const Text("Sign in"),
+                child: const Text("Save"),
               ),
-              const Text('Create an account !',
+              const Text('Do you have an account ?',
               style:  TextStyle(
                 color: Colors.red,
                 fontSize: 15,
 
-              ),),
+              ),
               
+              ),
               ElevatedButton(
                 onPressed: () {
-                    Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const RegisterScreen()),
-                  );
+                    Navigator.pop(context);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
                 ),
-                child: const Text("Sign up"),
+                child: const Text("Sign In"),
               ),
             ],
           ),
@@ -113,6 +100,6 @@ void initState(){
 void main()  {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: LoginScreen(),
+    home: RegisterScreen(),
   ));
 }
