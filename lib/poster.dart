@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'functions.dart';
-import 'movie_model.dart';
-import 'home_page.dart';
+
 
 class Poster extends StatefulWidget {
+  // ignore: constant_identifier_names
   static const POSTER_RATIO = 0.7;
 
-  Poster(
+  const Poster(
     this.posterUrl, {
     super.key,
     this.height = 100.0,
