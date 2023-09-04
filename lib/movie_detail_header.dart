@@ -4,12 +4,14 @@ import 'package:movie_app/movie_model.dart';
 import 'arc_banner_image.dart';
 import 'poster.dart';
 
+// ignore: must_be_immutable
 class MovieDetailHeader extends StatelessWidget {
   MovieDetailHeader(this.movie, this.index, {super.key});
   final Movie2 movie;
   final int index;
 
   List<String> categories = ['Comedy', 'Fantastic'];
+  // ignore: unused_element
   List<Widget> _buildCategoryChips(TextTheme textTheme) {
     return categories.map((category) {
       return Padding(
