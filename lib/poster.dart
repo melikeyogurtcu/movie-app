@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Poster extends StatefulWidget {
   // ignore: constant_identifier_names
   static const POSTER_RATIO = 0.7;
