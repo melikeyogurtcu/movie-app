@@ -1,9 +1,6 @@
 import 'package:movie_app/movie_model.dart';
-
-
 import 'movie_detail_header.dart';
 import 'storyline.dart';
-
 import 'package:flutter/material.dart';
 
 class MovieDetailsPage extends StatelessWidget {
@@ -37,8 +34,7 @@ class MovieDetailsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                avatar: const Icon(Icons
-                    .language), 
+                avatar: const Icon(Icons.language),
               ),
             ),
             Padding(
@@ -57,8 +53,7 @@ class MovieDetailsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                avatar: const Icon(Icons.star,
-                    color: Colors.yellow), 
+                avatar: const Icon(Icons.star, color: Colors.yellow),
               ),
             ),
           ]),

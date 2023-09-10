@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/movie_model.dart';
-
 import 'arc_banner_image.dart';
 import 'poster.dart';
 
@@ -71,11 +70,9 @@ class MovieDetailHeader extends StatelessWidget {
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black
-                            .withOpacity(0.3), 
-                        offset:
-                            const Offset(8.0, 8.0), 
-                        blurRadius: 8.0, 
+                        color: Colors.black.withOpacity(0.3),
+                        offset: const Offset(8.0, 8.0),
+                        blurRadius: 8.0,
                       ),
                     ],
                   ),

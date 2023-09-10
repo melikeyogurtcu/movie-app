@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
 
@@ -17,7 +16,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Future<void> registerWithEmailAndPassword(
       String email, String password) async {
     try {
-      UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      UserCredential userCredential =
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: _usernameController.text,
         password: _passwordController.text,
       );
@@ -77,7 +77,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
               // Enter Button
               ElevatedButton(
                 onPressed: () {
-                  registerWithEmailAndPassword(_usernameController.text, _passwordController.text);
+                  registerWithEmailAndPassword(
+                      _usernameController.text, _passwordController.text);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red.shade500,
@@ -106,8 +107,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
     );
   }
-
-  
 }
 
 void main() {
