@@ -3,7 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:movie_app/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -19,8 +19,8 @@ class _SplashScreenState extends State<SplashScreen> {
   navigateGoHome() async {
     await Future.delayed(const Duration(seconds: 6), () {});
     // ignore: use_build_context_synchronously
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: ((context) =>  const LoginScreen())));
+    Navigator.pushReplacement(context,
+        MaterialPageRoute(builder: ((context) => const LoginScreen())));
   }
 
   @override
