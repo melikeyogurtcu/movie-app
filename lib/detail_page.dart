@@ -61,6 +61,16 @@ class MovieDetailsPage extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: Storyline(movie.overview),
           ),
+          /*Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.yellow.shade800),
+              ),
+              onPressed: () {},
+              child: const Text('Watch the trailer'),
+            ),
+          ),*/
           const SizedBox(height: 30.0),
         ],
       ),

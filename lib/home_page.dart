@@ -47,10 +47,13 @@ class _home_pageState extends State<home_page> {
               Navigator.pop(context);
             },
             icon: const Icon(
-              Icons.arrow_back,
+              Icons.home_outlined,
               color: Colors.red,
             )),
         backgroundColor: Colors.white,
+        shadowColor:Colors.white,
+        elevation: 0,
+         //appbar şeffaflığı
         title: const Text(
           'Popular Movies',
           style: TextStyle(color: Colors.red),
