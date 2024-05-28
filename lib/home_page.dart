@@ -41,7 +41,9 @@ class _home_pageState extends State<home_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        foregroundColor: Colors.white,
         leading: IconButton(
             onPressed: () {
               Navigator.pop(context);

@@ -12,45 +12,51 @@ class Storyline extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Story line',
-          style: textTheme.subtitle1!.copyWith(fontSize: 18.0),
+        ListTile(
+          title: Text(
+            'Story line',
+            style: textTheme.titleMedium!.copyWith(fontSize: 18.0),
+          ),
         ),
         SizedBox(height: 8.0),
         Text(
           storyline!,
-          style: textTheme.bodyText2!.copyWith(
+          style: textTheme.bodyMedium!.copyWith(
             color: Colors.black45,
             fontSize: 16.0,
           ),
+          maxLines: 5,
+          overflow: TextOverflow.ellipsis,
         ),
         Row(
-  mainAxisAlignment: MainAxisAlignment.end,
-  crossAxisAlignment: CrossAxisAlignment.end,
-  children: [
-    GestureDetector(
-      onTap: () {
-        // 'more' yazısına tıklandığında yapılacak işlemler
-      },
-      child: Text(
-        'more',
-        style: textTheme.bodyText2!
-            .copyWith(fontSize: 16.0, color: theme.colorScheme.secondary),
-      ),
-    ),
-    GestureDetector(
-      onTap: () {
-        // 'keyboard_arrow_down' simgesine tıklandığında yapılacak işlemler
-      },
-      child: Icon(
-        Icons.keyboard_arrow_down,
-        size: 18.0,
-        color: theme.colorScheme.secondary,
-      ),
-    ),
-  ],
-),
-
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            TextButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: const Text('Story line'),
+                        content: Text(storyline!),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: const Text('Close'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                  
+                },
+                child: const Text('Read more',
+                    style: TextStyle(color: Colors.black, fontSize: 16.0)  ))
+          ],
+        ),
       ],
     );
   }

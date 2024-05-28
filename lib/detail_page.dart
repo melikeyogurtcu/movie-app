@@ -60,6 +60,7 @@ class MovieDetailsPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Storyline(movie.overview),
+            
           ),
           /*Padding(
             padding: const EdgeInsets.all(20.0),

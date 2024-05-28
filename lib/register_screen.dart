@@ -83,7 +83,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red.shade500,
                 ),
-                child: const Text("Create my account "),
+                child: const Text("Create my account ",
+                    style: TextStyle(color: Colors.white)),
               ),
               const Text(
                 'Do you have an account ?',
@@ -99,7 +100,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
                 ),
-                child: const Text("Sign in"),
+                child: const Text("Sign in",
+                    style: TextStyle(color: Colors.white)),
+                
               ),
             ],
           ),
