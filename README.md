@@ -60,6 +60,7 @@ bir film listesi uygulamasıdır.
 
  #### [EN]
 
+# A popular movie application developed with Flutter.
 👩🏽‍💻 This application is a movie list application that uses 
 the TMDB API to list popular movies and their details.
 
