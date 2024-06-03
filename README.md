@@ -42,12 +42,16 @@ bir film listesi uygulamasıdır.
 
 <img src="images/readme_images/home_screen.png" alt="splash_page" width="300"/>
 
+**Detail Screen**
+
+<img src="images/readme_images/detail_screen.png" alt="detail_page" width="300"/>
+
 **Projeye Genel Bakış**
 
 ![view](images/readme_images/view.gif) 
 
-**İletişim**
-- **Melike Yoğurtcu** [@melikeyogurtcu](https://github.com/melikeyogurtcu)
+**İletişim 💌**
+- **Melike Yoğurtcu** [@melikeyogurtcu](https://github.com/melikeyogurtcu) 👩🏽‍💻
 
 
 
@@ -89,13 +93,16 @@ the TMDB API to list popular movies and their details.
 
 <img src="images/readme_images/home_screen.png" alt="splash_page" width="300"/>
 
+**Detail Screen**
+
+<img src="images/readme_images/detail_screen.png" alt="detail_page" width="300"/>
 
 **Projeye Genel Bakış**
 
 ![view](images/readme_images/view.gif) 
 
-**Contact**
-- **Melike Yoğurtcu** [@melikeyogurtcu](https://github.com/melikeyogurtcu)
+**Contact 💌**
+- **Melike Yoğurtcu** [@melikeyogurtcu](https://github.com/melikeyogurtcu) 👩🏽‍💻
 
 
 
