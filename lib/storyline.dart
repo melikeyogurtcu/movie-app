@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Storyline extends StatelessWidget {
-  Storyline(this.storyline);
+  const Storyline(this.storyline, {super.key});
   final String? storyline;
 
   @override
@@ -18,7 +18,7 @@ class Storyline extends StatelessWidget {
             style: textTheme.titleMedium!.copyWith(fontSize: 18.0),
           ),
         ),
-        SizedBox(height: 8.0),
+        const SizedBox(height: 8.0),
         Text(
           storyline!,
           style: textTheme.bodyMedium!.copyWith(

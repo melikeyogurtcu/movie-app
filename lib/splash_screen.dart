@@ -30,7 +30,6 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
-//Lottie animation is added a child widget
             child: Lottie.asset("images/animation_lldtbs8j.json"),
           ),
         ),

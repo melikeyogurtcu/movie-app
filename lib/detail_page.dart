@@ -43,12 +43,12 @@ class MovieDetailsPage extends StatelessWidget {
                 label: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text('Vote Average'),
+                    const Text('Vote Average'),
                     Padding(
                       padding: const EdgeInsets.only(right: 8.0),
                       child: Text(
                         movie.vote_average.toString(),
-                        style: TextStyle(color: Colors.green),
+                        style: const TextStyle(color: Colors.green),
                       ),
                     ),
                   ],
