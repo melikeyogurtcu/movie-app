@@ -7,7 +7,7 @@
 
  #### [TR]
 
-# Movie application developed using Flutter
+# Flutter ile geliştirilmiş popüler film uygulaması
 👩🏽‍💻 Bu uygulama, TMDB API'sini kullanarak popüler filmleri ve detaylarını listeleyen
 bir film listesi uygulamasıdır.
 
@@ -32,7 +32,7 @@ bir film listesi uygulamasıdır.
 
 **Splash Screen**
 
- <img src="images/readme_images/splash_screen.gif" alt="splash_page" width="300"/>
+![splash_page](images/readme_images/splash_screen.gif) 
 
 **Login & Register Screen**
 
@@ -40,12 +40,11 @@ bir film listesi uygulamasıdır.
 
 **Home Screen**
 
- ![splash_page](images/readme_images/home_screen.png){:width="300"}
+<img src="images/readme_images/home_screen.png" alt="splash_page" width="300"/>
 
 **Projeye Genel Bakış**
 
- ![view](images/readme_images/view.gif){:width="300"} 
-
+![view](images/readme_images/view.gif) 
 
 **İletişim**
 - **Melike Yoğurtcu** [@melikeyogurtcu](https://github.com/melikeyogurtcu)
@@ -80,19 +79,20 @@ the TMDB API to list popular movies and their details.
 
 **Splash Screen**
 
-| ![splash_page](images/readme_images/splash_screen.gif) |
+![splash_page](images/readme_images/splash_screen.gif) 
 
 **Login & Register Screen**
 
-| ![login_screen](images/readme_images/login_screen.png)| ![register_screen](images/readme_images/register_screen.png) |
+ <img src="images/readme_images/login_screen.png" alt="login_screen" width="300"/> | <img src="images/readme_images/register_screen.png" alt="register_screen" width="300"/>
 
 **Home Screen**
 
-| ![splash_page](images/readme_images/home_screen.png) |
+<img src="images/readme_images/home_screen.png" alt="splash_page" width="300"/>
+
 
 **Projeye Genel Bakış**
 
-| ![view](images/readme_images/view.gif) |
+![view](images/readme_images/view.gif) 
 
 **Contact**
 - **Melike Yoğurtcu** [@melikeyogurtcu](https://github.com/melikeyogurtcu)
