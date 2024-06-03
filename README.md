@@ -32,19 +32,20 @@ bir film listesi uygulamasıdır.
 
 **Splash Screen**
 
-| ![splash_page](images/readme_images/splash_screen.gif) |
+ <img src="images/readme_images/splash_screen.gif" alt="splash_page" width="300"/>
 
 **Login & Register Screen**
 
-| ![login_screen](images/readme_images/login_screen.png)| ![register_screen](images/readme_images/register_screen.png) |
+ <img src="images/readme_images/login_screen.png" alt="login_screen" width="300"/> | <img src="images/readme_images/register_screen.png" alt="register_screen" width="300"/>
 
 **Home Screen**
 
-| ![splash_page](images/readme_images/home_screen.png) |
+ ![splash_page](images/readme_images/home_screen.png){:width="300"}
 
 **Projeye Genel Bakış**
 
-| ![view](images/readme_images/view.gif) |
+ ![view](images/readme_images/view.gif){:width="300"} 
+
 
 **İletişim**
 - **Melike Yoğurtcu** [@melikeyogurtcu](https://github.com/melikeyogurtcu)
