@@ -11,8 +11,8 @@
 👩🏽‍💻 Bu uygulama, TMDB API'sini kullanarak popüler filmleri ve detaylarını listeleyen
 bir film listesi uygulamasıdır.
 
---🔑 Login işlemleri için Firebase authentication kullanılmıştır.
---💥 Splash Screen için Lottie kütüphanesini kullanılmıştır.
+- 🔑 Login işlemleri için Firebase authentication kullanılmıştır.
+- 💥 Splash Screen için Lottie kütüphanesini kullanılmıştır.
 
 🛠️❗️ Firebase yapılandırma bilgilerini projenize eklerken veya güncellerken, dikkatlice işlem yapın ve güvenlik önlemlerini uygulayın. Hassas bilgileri eklememeye özen gösterin. Ayrıca, Firebase yapılandırma bilgilerini sürdürülebilir ve güvenli bir şekilde yönetmek için çevresel değişkenler veya güvenli depolama yöntemlerini kullanabilirsiniz.
 
@@ -36,7 +36,7 @@ bir film listesi uygulamasıdır.
 
 **Login & Register Screen**
 
- <img src="images/readme_images/login_screen.png" alt="login_screen" width="300"/> | <img src="images/readme_images/register_screen.png" alt="register_screen" width="300"/>
+ <img src="images/readme_images/login_screen.png" alt="login_screen" width="300"/>  <img src="images/readme_images/register_screen.png" alt="register_screen" width="300"/>
 
 **Home Screen**
 
@@ -46,7 +46,7 @@ bir film listesi uygulamasıdır.
 
 <img src="images/readme_images/detail_screen.png" alt="detail_page" width="300"/>
 
-**Projeye Genel Bakış**
+**Project Overview**
 
 ![view](images/readme_images/view.gif) 
 
@@ -63,8 +63,8 @@ bir film listesi uygulamasıdır.
 👩🏽‍💻 This application is a movie list application that uses 
 the TMDB API to list popular movies and their details.
 
---🔑 Firebase authentication is used for login operations.
---💥 The Lottie library is used for the Splash Screen.
+- 🔑 Firebase authentication is used for login operations.
+- 💥 The Lottie library is used for the Splash Screen.
 
 🛠️❗️ When adding or updating Firebase configuration information to your project, proceed carefully and implement security measures. Be cautious not to include sensitive information. Additionally, to manage Firebase configuration information sustainably and securely, you can use environment variables or secure storage methods.
 
@@ -87,7 +87,7 @@ the TMDB API to list popular movies and their details.
 
 **Login & Register Screen**
 
- <img src="images/readme_images/login_screen.png" alt="login_screen" width="300"/> | <img src="images/readme_images/register_screen.png" alt="register_screen" width="300"/>
+ <img src="images/readme_images/login_screen.png" alt="login_screen" width="300"/>  <img src="images/readme_images/register_screen.png" alt="register_screen" width="300"/>
 
 **Home Screen**
 
